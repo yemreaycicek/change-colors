@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>changeColors</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+			background-color: #F6F7F7;
+			cursor: pointer;
+    }
+  </style>
+</head>
+<body onclick="changeColors()">
+  <script>
+    let index = 1;
+    let changeColors = () => {
+      let colors = ["#F6F7F7", "#72AEE6", "#FF8085", "#F0C33C", "#1ED14B"];
+      document.getElementsByTagName('body')[0].style.backgroundColor = colors[index++];
+      if (index > colors.length - 1) {
+        index = 0;
+      }
+    }
+  </script>
+</body>
+</html>
